@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../products.model';
+import { HttpClient } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
 
-  product: Product;
+ readonly ROOT_URL = 'http://localhost:3000';
 
-  constructor() { 
-    this.product = new Product('sjdhfalsd', 'Gildan', '5000b', 'image/url.jpg', 3);
-    console.log(this.product);
+ products: any;
+  
+constructor(private  http:  HttpClient) { }
+  getProducts() {
+    this.products = this.http.get(this.ROOT_URL + "/products")
   }
-
-
-ngOnInit() {
-}
-
+  
 }

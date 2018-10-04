@@ -1,18 +1,10 @@
-<div>
-  <h1>Products</h1>
-  <div>
-    {{product.sku}}
-  </div>
-  <div>
-    {{product.brandName}}
-  </div>
-  <div>
-    {{product.styleName}}
-  </div>
-  <div>
-    {{product.imageUrl}}
-  </div>
-  <div>
-    {{product.price}}
-  </div>
-</div>
+<button (click)="getProducts()">click</button>
+
+<ul>
+    <li *ngFor="let item of products | async">
+      {{item.brandName}}
+      {{item.styleName}}
+      {{item.imageUrl}}
+
+    </li> 
+</ul>
