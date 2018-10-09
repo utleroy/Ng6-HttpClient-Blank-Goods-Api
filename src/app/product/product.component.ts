@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ProductsService } from '../products.service';
 
 
 @Component({
@@ -7,15 +8,17 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
 
- readonly ROOT_URL = 'http://localhost:3000';
-
- products: any;
+  public products = [];
+  public errorMsg;
   
-constructor(private  http:  HttpClient) { }
-  getProducts() {
-    this.products = this.http.get(this.ROOT_URL + "/products")
+  constructor(private _productService: ProductsService) {}
+
+  ngOnInit() {
+      this._productService.getProducts()
+      .subscribe(data => this.products = data,
+                  error => this.errorMsg = error)
+      
   }
-  
 }

@@ -1,0 +1,23 @@
+{
+    "garments":
+    [
+        {
+            "brandName": "Next Level Apparel",
+            "styleName": "6210",
+            "color": "Heather Grey",
+            "imageUrl": "src/assets/images/nla6210/nla6120heathergrey.png"
+        },
+        {
+            "brandName": "Next Level Apparel",
+            "styleName": "6210",
+            "color": "Vintage Heather Black",
+            "imageUrl": "../assets/images/nla-6210/nla-6120-vintage-black.png"
+        },
+        {
+            "brandName": "Next Level Apparel",
+            "styleName": "6210",
+            "color": "Stone Grey",
+            "imageUrl": "../assets/images/nla-6210/nla-6120-stone-grey.png"
+        }
+    ]
+}

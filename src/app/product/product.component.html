@@ -1,7 +1,8 @@
-<button (click)="getProducts()">click</button>
 
+<h3>Products</h3>
+<h4>{{errorMsg}}</h4>
 <ul>
-    <li *ngFor="let item of products | async">
+    <li *ngFor="let item of products">
       {{item.brandName}}
       {{item.styleName}}
       {{item.imageUrl}}
