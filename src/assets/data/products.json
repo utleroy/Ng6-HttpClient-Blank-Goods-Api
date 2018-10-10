@@ -3,12 +3,12 @@
         "id": 1,
         "brandName": "Gildan",
         "styleName": "5000b",
-        "imageUrl": "src/assets/images/1.jpg"
+        "imageUrl": "src/assets/images/nla6210/nla6210base.png"
     },
     {
         "id": 2,
         "brandName": "Jersee",
         "styleName": "200",
-        "imageUrl": "src/assets/images/2.jpg"
+        "imageUrl": "src/assets/images/nla6210/nla-6210-vintage-black.png"
     }
 ]
