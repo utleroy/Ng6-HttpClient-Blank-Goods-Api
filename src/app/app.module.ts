@@ -10,7 +10,7 @@ import { ProductsService } from './products.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,3 @@
+GET /v2/categories/ HTTP/1.1
+Host: api.ssactivewear.com
+Authorization: Basic 77205 19ca413e-38eb-4f90-b617-c06737464fc7
