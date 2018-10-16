@@ -1,12 +1,8 @@
 
 <h3>Products</h3>
-<h4>{{errorMsg}}</h4>
-<ul>
-    <li *ngFor="let item of products">
-      {{item.brandName}}
-      {{item.styleName}}
-      <img src="{{item.imageUrl}}" width="200px"alt="">
-      
 
-    </li> 
+<ul *ngFor="let category of categories$">
+  <li>
+      {{category.name}}
+  </li>
 </ul>

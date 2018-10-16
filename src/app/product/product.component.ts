@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ProductsService } from '../products.service';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { Category } from '../products';
+import { catchError, map, tap } from 'rxjs/operators';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -10,15 +13,20 @@ import { ProductsService } from '../products.service';
 })
 export class ProductComponent implements OnInit {
 
-  public products = [];
-  public errorMsg;
-  
-  constructor(private _productService: ProductsService) {}
+  readonly ROOT_URL = "https://api.scalablepress.com/v2";
 
-  ngOnInit() {
-      this._productService.getProducts()
-      .subscribe((response) => console.log(response))
-                  
-      
+  categories$: Object;
+
+  constructor(private data: DataService) { }
+
+  ngOnInit() { 
+    
+      this.data.getProducts().subscribe(
+        data => console.log(this.categories$ = data)
+
+      )
+    
+
   }
 }
+
