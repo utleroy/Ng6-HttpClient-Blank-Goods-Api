@@ -19,13 +19,14 @@ export class ProductComponent implements OnInit {
 
   constructor(private data: DataService) { }
 
-  ngOnInit() {
+  ngOnInit() { 
     
       this.data.getProducts().subscribe(
         data => console.log(this.categories$ = data)
 
       )
     
+
   }
 }
 
